@@ -1,0 +1,3 @@
+import {sectors} from '../content.mjs';
+import {url,arrow} from '../config.mjs';
+export function Industries(){return `<section class="section wrap industries"><div class="industry-visual"><img src="${url('assets/logistics.webp')}" width="1400" height="933" loading="lazy" alt="Actividad y estructura de una instalación logística"></div><div class="industry-content"><p class="eyebrow">Sectores</p><h2>Experiencia aplicada<br> a operaciones críticas.</h2><p>Cada sector tiene sus propias exigencias. El punto de partida es entender las tuyas.</p><div class="sector-list">${sectors.map(s=>`<a href="${url('sectores/'+s.slug+'/')}"><span>${s.name}</span>${arrow}</a>`).join('')}</div></div></section>`;}

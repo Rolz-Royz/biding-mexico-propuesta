@@ -1,0 +1,2 @@
+import {cta,url,arrow} from '../config.mjs';
+export function ContactCTA(title='¿Qué riesgos podrían estar afectando tu operación?',service=''){return `<section class="contact-cta"><div class="wrap cta-grid"><div><h2>${title}</h2><p>Conversemos sobre los puntos críticos de tu organización y cómo reducir su impacto.</p></div><div class="cta-actions">${cta('Solicitar una evaluación','',service)}<a class="text-link light" href="${url('contacto/')}">Contactar a Biding ${arrow}</a></div></div></section>`;}

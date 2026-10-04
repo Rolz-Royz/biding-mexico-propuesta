@@ -1,0 +1,2 @@
+import {steps} from '../content.mjs';
+export function Methodology(){return `<section class="section methodology"><div class="wrap"><div class="method-heading"><h2>Un proceso claro.<br> Una operación mejor preparada.</h2></div><div class="method-phases" aria-hidden="true"><span>Identificar</span><span>Prevenir</span><span>Actuar</span></div><ol class="process">${steps.map(([name,text],i)=>`<li><span class="step-number">0${i+1}</span><h3>${name}</h3><p>${text}</p></li>`).join('')}</ol></div></section>`;}

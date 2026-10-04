@@ -51,3 +51,12 @@ La propuesta usa `noindex,nofollow` y robots restrictivo. Antes de una publicaci
 ## Verificación
 
 `npm test` comprueba las 16 páginas, un H1 por página, títulos únicos, presencia de enlaces legales y portal, noindex y existencia de enlaces/recursos locales. QA de navegador: responsive, navegación móvil con Escape, validación de formulario y preselección de servicio. No se afirman métricas de Core Web Vitals ni certificación WCAG.
+
+## Refinamiento de Inicio con Impeccable
+
+Se conservan identidad, contenido, rutas y funciones. Inicio incorpora componentes separados, diagrama SVG conceptual de riesgos, metodología conectada y fotografías editoriales ilustrativas.
+
+- Análisis: imagen generada con OpenAI, manos anónimas revisando mapas de rutas y documentos sobre una mesa, fotografía realista, tonos neutros, sin logos ni datos legibles. Recursos finales: `analysis.webp` y `analysis-mobile.webp`.
+- Continuidad: imagen generada con OpenAI, centro de distribución con muelles y camiones sin marca al anochecer, fotografía editorial realista. Recursos finales: `continuity.webp` y `continuity-mobile.webp`.
+- Son imágenes ilustrativas; no representan instalaciones, equipo ni clientes reales de Biding. WebP responsive, dimensiones declaradas y carga diferida.
+- QA: escritorio 1440 px y móvil 390 px sin desbordamiento horizontal; enlaces visibles de Inicio con altura mínima de 44 px. Detector Impeccable sin hallazgos en los nuevos componentes. No sustituye una auditoría WCAG completa.

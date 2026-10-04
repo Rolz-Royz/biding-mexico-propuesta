@@ -1,0 +1,164 @@
+/* Homepage refinement. Retains the established Manrope, neutral, red and industrial visual identity. */
+.homepage {
+  --surface-secondary: #ecefe9;
+  --on-dark: #f5f7f1;
+  --on-dark-muted: #c7d0c5;
+  --diagram-line: #b9c3b5;
+  --focus: #a66608;
+  --section-space: clamp(68px, 7vw, 106px);
+  scrollbar-color: #818c7f var(--paper);
+}
+.homepage h1, .homepage h2 { letter-spacing: -.035em; text-wrap: balance; }
+.homepage h3 { letter-spacing: -.02em; }
+.homepage p { text-wrap: pretty; }
+.homepage .section { padding-block: var(--section-space); }
+.homepage a { text-underline-offset: .3em; }
+.homepage :focus-visible { outline-color: var(--focus); }
+.homepage .text-link { min-height: 48px; font-size: 14px; }
+.homepage .button { font-size: 14px; }
+.homepage .header nav > a { font-size: 13px; }
+.homepage .header .header-cta { font-size: 12px; min-height: 46px; }
+.homepage .hero h1 { letter-spacing: -.035em; }
+.homepage .hero-image { filter: saturate(.65) brightness(.84); }
+.homepage .hero-description { font-size: 17px; line-height: 1.7; max-width: 510px; }
+.homepage .hero .button, .homepage .hero .text-link { font-size: 14px; }
+.homepage .principles p { font-size: 14px; }
+
+.home-intro { display: grid; grid-template-columns: 1fr .95fr; align-items: center; gap: 86px; }
+.intro-copy h2 { max-width: 610px; }
+.intro-copy .lead { margin-top: 32px; margin-bottom: 24px; font-size: 23px; }
+.intro-copy > p:not(.lead) { font-size: 16px; line-height: 1.8; max-width: 62ch; }
+.operation-diagram { margin: 0; padding: 14px 0; }
+.operation-diagram svg { width: 100%; height: auto; overflow: visible; }
+.diagram-guides { stroke: var(--line); stroke-width: 1; }
+.diagram-guides circle { stroke-dasharray: 2 7; }
+.diagram-links { stroke: var(--diagram-line); stroke-width: 1.4; }
+.diagram-junctions { fill: var(--red); }
+.diagram-core { fill: var(--paper); stroke: var(--red); stroke-width: 1.4; }
+.diagram-labels { fill: var(--muted); font-size: 18px; font-weight: 500; }
+.diagram-core-label { fill: var(--ink); font-size: 17px; font-weight: 650; }
+.operation-diagram figcaption { text-align: center; margin-top: 8px; font-size: 14px; color: var(--muted); }
+
+.home-services { background: var(--surface-secondary); }
+.home-service-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 92px; align-items: start; }
+.home-service-feature h2 { font-size: clamp(34px, 3.3vw, 48px); }
+.home-service-feature > p { margin-top: 25px; max-width: 48ch; font-size: 16px; }
+.analysis-photo { margin: 30px 0 15px; }
+.analysis-photo img { width: 100%; height: 278px; object-position: center 46%; }
+.analysis-photo figcaption { margin-top: 13px; font-size: 13px; color: var(--muted); }
+.home-service-list { border-top: 1px solid var(--diagram-line); }
+.home-service-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 27px 0; border-bottom: 1px solid var(--diagram-line); }
+.home-service-row h3 { font-size: 25px; line-height: 1.3; transition: color 180ms ease-out; }
+.home-service-row p { font-size: 15px; margin: 8px 0 13px; }
+.home-service-cap { display: block; max-width: 54ch; font-size: 12px; line-height: 1.6; color: var(--muted); }
+.home-service-row > span { display: grid; place-items: center; width: 42px; height: 42px; flex: 0 0 42px; color: var(--ink); }
+.home-service-row:hover h3, .home-service-row:focus-visible h3 { color: var(--red); }
+
+.home-methodology h2 { max-width: 790px; }
+.home-method-phases { display: grid; grid-template-columns: 2fr 1fr 2fr; margin-top: 58px; gap: 24px; }
+.home-method-phases span { padding-bottom: 18px; color: var(--muted); font-size: 15px; }
+.home-process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; list-style: none; padding: 0; margin: 0; }
+.home-process li { position: relative; padding-top: 2px; }
+.home-process li:not(:last-child)::after { content: ''; position: absolute; top: 25px; height: 1px; left: 48px; right: -28px; background: var(--diagram-line); }
+.process-node { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--red); background: var(--paper); color: var(--red); margin-bottom: 28px; border-radius: 50%; }
+.process-node span { font-size: 14px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.process-copy h3 { margin-bottom: 15px; font-size: 21px; }
+.process-copy p { margin: 0; font-size: 15px; max-width: 24ch; line-height: 1.7; }
+.process-phase { display: none; }
+.homepage .industries { border-top: 1px solid var(--line); gap: 74px; }
+.homepage .industry-content > .eyebrow { display: none; }
+.homepage .industry-content { padding-top: 22px; }
+.homepage .industry-content > p:not(.eyebrow) { font-size: 16px; max-width: 45ch; }
+.homepage .industry-visual img { min-height: 540px; aspect-ratio: 1 / 1.05; object-position: center; filter: saturate(.7); }
+.homepage .sector-list a { min-height: 60px; font-size: 18px; }
+
+.home-continuity { background: var(--dark); color: var(--on-dark); padding-block: 88px 46px; }
+.continuity-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 76px; }
+.continuity-copy h2 { font-size: clamp(36px, 3.5vw, 52px); max-width: 620px; }
+.continuity-copy p { color: var(--on-dark-muted); margin-top: 28px; font-size: 16px; line-height: 1.8; max-width: 58ch; }
+.continuity-photo { margin: 0; }
+.continuity-photo img { width: 100%; height: 450px; object-position: 60% center; }
+.continuity-dimensions { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 55px; border-top: 1px solid #667160; gap: 20px; }
+.continuity-dimensions > * { position: relative; font-size: 15px; padding-top: 22px; font-weight: 500; color: var(--on-dark-muted); }
+.continuity-dimensions strong { color: var(--on-dark); }
+.continuity-dimensions > *:not(:last-child)::after { content: ''; width: 16px; height: 1px; background: #667160; right: 18%; top: 36px; position: absolute; }
+
+.insights-heading { max-width: 850px; }
+.insights-heading h2 { max-width: 800px; }
+.insights-heading p { font-size: 16px; margin-top: 26px; max-width: 65ch; }
+.home-insights-grid { margin-top: 44px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 85px; align-items: center; }
+.insights-photo { margin: 0; }
+.insights-photo img { width: 100%; height: 290px; object-position: right 75%; filter: saturate(.6); }
+.insights-photo figcaption { margin-top: 16px; font-size: 14px; color: var(--muted); }
+.insights-editorial .status-label { font-size: 13px; }
+.editorial-topics { margin-block: 20px; }
+.editorial-topics h3 { font-size: 24px; padding-block: 17px; border-bottom: 1px solid var(--line); }
+.homepage .contact-cta p:not(.eyebrow) { font-size: 16px; }
+.homepage .footer-grid > div > a { display: flex; align-items: center; width: fit-content; min-height: 44px; font-size: 13px; margin: 0; }
+.homepage .footer-brand > span { font-size: 14px; }
+.homepage .footer-bottom { font-size: 12px; align-items: center; }
+.homepage .footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+
+@media (max-width: 1250px) {
+  .homepage .header nav { gap: 17px; }
+  .homepage .header nav > a { font-size: 12px; }
+  .homepage .header .header-cta { font-size: 11px; }
+  .home-intro, .home-service-grid, .continuity-grid, .home-insights-grid { gap: 46px; }
+  .process-copy h3 { font-size: 19px; }
+}
+@media (max-width: 1199px) {
+  .homepage .header nav > a { font-size: 16px; }
+  .homepage .header .header-cta { font-size: 14px; }
+  .homepage .hero h1 { font-size: clamp(52px, 6.3vw, 68px); }
+  .home-process { gap: 18px; }
+  .home-process li:not(:last-child)::after { right: -18px; }
+  .process-copy p { font-size: 14px; }
+  .continuity-photo img { height: 440px; }
+}
+@media (max-width: 767px) {
+  .homepage .menu-toggle { min-height: 48px; }
+  .homepage .hero { min-height: 650px; }
+  .homepage .hero h1 { font-size: clamp(43px, 10.5vw, 63px); letter-spacing: -.035em; }
+  .homepage .hero-description { font-size: 16px; max-width: 35ch; }
+  .homepage .hero-image { object-position: 73% center; }
+  .homepage .hero .text-link { min-height: 48px; }
+  .home-intro, .home-service-grid, .continuity-grid, .home-insights-grid { grid-template-columns: minmax(0, 1fr); gap: 35px; }
+  .intro-copy h2 { font-size: 36px; }
+  .intro-copy .lead { font-size: 21px; margin-top: 26px; }
+  .operation-diagram { padding-top: 0; width: 100%; }
+  .diagram-labels { font-size: 20px; }
+  .operation-diagram figcaption { margin-top: 0; }
+  .home-service-feature > p { margin-bottom: 0; }
+  .analysis-photo img { height: 230px; }
+  .analysis-photo { margin-top: 27px; }
+  .home-service-row { padding-block: 25px; gap: 12px; }
+  .home-service-row h3 { font-size: 23px; }
+  .home-service-row p { font-size: 15px; }
+  .home-service-cap { font-size: 13px; }
+  .home-method-phases { display: none; }
+  .home-process { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 42px; }
+  .home-process li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 22px; padding-bottom: 33px; }
+  .home-process li:last-child { padding-bottom: 0; }
+  .home-process li:not(:last-child)::after { top: 50px; bottom: 0; left: 23px; right: auto; width: 1px; height: auto; }
+  .process-node { margin: 0; }
+  .process-phase { display: block; color: var(--red); font-size: 13px; line-height: 1.5; margin-bottom: 6px; }
+  .process-copy h3 { font-size: 24px; margin-bottom: 13px; }
+  .process-copy p { max-width: none; font-size: 15px; }
+  .homepage .industries { gap: 32px; }
+  .homepage .industry-visual img { min-height: 0; height: 330px; aspect-ratio: auto; }
+  .homepage .industry-content { padding-top: 0; }
+  .home-continuity { padding-block: 64px 32px; }
+  .continuity-copy h2 { font-size: 37px; }
+  .continuity-photo img { height: 300px; object-position: 65% center; }
+  .continuity-dimensions { grid-template-columns: repeat(2, 1fr); gap: 0 25px; margin-top: 32px; }
+  .continuity-dimensions > * { font-size: 14px; padding-block: 15px; }
+  .continuity-dimensions > *:not(:last-child)::after { display: none; }
+  .home-insights-grid { margin-top: 34px; }
+  .insights-photo img { height: 240px; }
+  .editorial-topics h3 { font-size: 23px; }
+  .homepage .footer-grid > div > a { min-height: 48px; font-size: 13px; }
+  .homepage .footer-bottom { align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-service-row h3 { transition: none; }
+}
